@@ -1,6 +1,6 @@
 # PartyPlayKit
 
-Shared local-party infrastructure for Empires, Doodleoop, and future games.
+Shared local-party infrastructure for [Empires](https://github.com/utopastac/empires-ios) and [Doodleoop](https://github.com/utopastac/doodleoop-ios).
 
 ## Contents
 
@@ -14,12 +14,18 @@ Game engines, wire message enums, themes, and screens stay app-specific.
 
 ## Consume
 
-Local path from an XcodeGen / Xcode app:
+Clone next to each app and depend via local path:
 
 ```yaml
+# XcodeGen
 packages:
   PartyPlayKit:
-    path: Packages/PartyPlayKit
+    path: ../party-play-kit
 ```
 
-Empires can later depend on this package via relative path or a dedicated git remote.
+```
+code/
+  party-play-kit/
+  empires-ios/
+  doodleoop-ios/
+```
